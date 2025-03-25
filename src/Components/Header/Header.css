@@ -1,0 +1,95 @@
+.header-container {
+  background: url("https://depobeta.com/pub/media/Artikel/Material_Beton/Gambar_5.png")
+    no-repeat center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  position: relative;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Efek transparansi */
+  backdrop-filter: blur(5px); /* Efek blur */
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsif untuk mode mobile */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: center;
+    text-align: center;
+  }
+  .content {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* spin effect */
+.animated-border {
+  position: relative;
+  background-color: #000; /* Warna dalam hitam */
+  color: #fff; /* Teks putih */
+  border: 2px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 20px;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #fff, transparent, #fff);
+  background-size: 200% 200%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: animated-border 3s linear infinite;
+}
+
+@keyframes animated-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
