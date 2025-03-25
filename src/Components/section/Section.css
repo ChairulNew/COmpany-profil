@@ -1,0 +1,73 @@
+/* Styling for marquee */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f2f5;
+  padding: 0;
+  position: relative;
+  margin: 25px 0;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px; /* Jarak antar card */
+  flex-wrap: nowrap;
+  gap: 20px;
+  min-width: 450px;
+  animation: marquee 15s linear infinite;
+}
+
+.card-marquee {
+  text-align: left;
+  /* flex-shrink: 0; */
+  font-size: 20px;
+  width: 550px;
+  height: auto;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+}
+
+/* RESPONSIF UNTUK TABLET */
+@media (max-width: 992px) {
+  .card {
+    width: 200px; /* Lebar card lebih kecil */
+    font-size: 18px; /* Ukuran teks menyesuaikan */
+  }
+}
+
+/* RESPONSIF UNTUK MOBILE */
+@media (max-width: 576px) {
+  .card {
+    width: 250px; /* Card lebih kecil untuk mobile */
+    font-size: 7px; /* Ukuran teks lebih kecil */
+    padding: 0px 0px;
+  }
+
+  .marquee {
+    gap: 10px; /* Jarak antar card lebih rapat di mobile */
+  }
+  .card-marquee {
+    width: 250px;
+    text-align: center;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* resposif mobile marquee */
+/* Animasi untuk pergerakan horizontal */
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

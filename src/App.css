@@ -1,3 +1,7 @@
+body {
+  background-color: aliceblue;
+  overflow-x: scroll;
+}
 * {
   font-family: Arial, Helvetica, sans-serif;
 }

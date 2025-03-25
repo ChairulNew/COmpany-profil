@@ -10,6 +10,9 @@ import {
 import { Search } from "react-bootstrap-icons"; // Import icon search
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// import css external
+import "./customNavbar.css";
+
 export default function CustomNavbar() {
   const [show, setShow] = useState(false);
 
@@ -19,7 +22,7 @@ export default function CustomNavbar() {
   return (
     <>
       {/* Navbar Utama */}
-      <Navbar expand="lg" className="bg-light shadow-sm">
+      <Navbar expand="lg" className="bg-light shadow-sm fixed">
         <div className="container-fluid d-flex flex-column">
           {/* Bagian Logo, Hamburger Menu, dan Pencarian */}
           <div className="d-flex w-100 justify-content-between align-items-center py-2">
@@ -42,7 +45,7 @@ export default function CustomNavbar() {
             </div>
 
             {/* Kolom Search (Desktop) */}
-            <Form className="d-none d-lg-flex">
+            <Form className="d-none d-lg-flex border-blue">
               <FormControl
                 type="search"
                 placeholder="Pencarian"
